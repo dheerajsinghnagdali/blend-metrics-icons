@@ -1,10 +1,10 @@
 {
   "name": "@blend-metrics/icons",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Icons for React",
-  "main": "index.js",
   "files": [
-    "lib/"
+    "lib/",
+    "README.md"
   ],
   "scripts": {
     "lint:check": "eslint .",
