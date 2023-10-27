@@ -20,5 +20,10 @@ yarn-error.log*
 next-env.d.ts
 
 # build
-/lib
-/build
+build/
+icons/
+social-solid/
+social/
+brands/
+flags/
+payment-methods/

@@ -13,7 +13,7 @@ npm install @blend-metrics/icons
 Now each icon can be imported individually as a React component:
 
 ```js
-import { AngelListDefault } from "@blend-metrics/icons/lib/social";
+import { AngelListDefault } from "@blend-metrics/icons/social";
 
 function MyComponent() {
   return (
@@ -24,7 +24,7 @@ function MyComponent() {
   );
 }
 
-import { AngelListSolid } from "@blend-metrics/icons/lib/social-solid";
+import { AngelListSolid } from "@blend-metrics/icons/social-solid";
 
 function MyAnotherComponent() {
   return (
@@ -36,12 +36,12 @@ function MyAnotherComponent() {
 }
 ```
 
-The social icons can be imported from `@blend-metrics/icons/lib/social` as well as `@blend-metrics/icons/lib/social-solid`
+The social icons can be imported from `@blend-metrics/icons/social` as well as `@blend-metrics/icons/social-solid`
 
-Likewise, the country icons can be imported from `@blend-metrics/icons/lib/flags`
+Likewise, the country icons can be imported from `@blend-metrics/icons/flags`
 
-Similarly, you can import the payment method icons from `@blend-metrics/icons/lib/payment-methods`
+Similarly, you can import the payment method icons from `@blend-metrics/icons/payment-methods`
 
-We've also got integration icons which can be imported from `@blend-metrics/icons/lib/brands`
+We've also got integration icons which can be imported from `@blend-metrics/icons/brands`
 
-Design system of Blend Metrics also got a whole variety of icons which you can import from `@blend-metrics/icons/lib/icons`
+Design system of Blend Metrics also got a whole variety of icons which you can import from `@blend-metrics/icons/icons`

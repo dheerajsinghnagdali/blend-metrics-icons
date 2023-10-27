@@ -8,22 +8,19 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write
+    runs-on: unbuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: "18.x"
-          registry-url: "https://registry.npmjs.org"
       - run: npm install -g npm
       - run: npm ci
-      - run: npm run lint:check
-      - run: npm run format:check
-      - run: npm run build
-      - run: npm run types:check
-      - run: npm publish --access public
+      - name: Create Release Pull Request or Publish
+        id: changesets
+        uses: changesets/actions@v1
+        with:
+          publish: npm run release
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

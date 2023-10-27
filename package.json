@@ -2,8 +2,16 @@
   "name": "@blend-metrics/icons",
   "version": "0.0.2",
   "description": "Icons for React",
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
-    "lib/",
+    "icons/**/*",
+    "brands/**/*",
+    "social-solid/**/*",
+    "social/**/*",
+    "payment-methods/**/*",
+    "flags/**/*",
     "README.md"
   ],
   "scripts": {
@@ -19,9 +27,11 @@
     "build:flags": "svgr --config-file ./configs/flags.config.js assets/flags",
     "build:brands": "svgr --config-file ./configs/brands.config.js assets/brands",
     "build:all-icons": "rimraf ./build && concurrently \"npm:build:icons\" \"npm:build:social\" \"npm:build:social-solid\" \"npm:build:payment-methods\" \"npm:build:flags\" \"npm:build:brands\"",
-    "build:build": "rimraf ./lib && tsup",
+    "build:build": "rimraf ./icons ./brands ./social-solid ./social ./payment-methods ./flags && concurrently \"tsup build/icons/index.ts --format cjs,esm --dts --out-dir icons\" \"tsup build/brands/index.ts --format cjs,esm --dts --out-dir brands\" \"tsup build/social-solid/index.ts --format cjs,esm --dts --out-dir social-solid\" \"tsup build/social/index.ts --format cjs,esm --dts --out-dir social \" \"tsup build/flags/index.ts --format cjs,esm --dts --out-dir flags\"  \"tsup build/payment-methods/index.ts --format cjs,esm --dts --out-dir payment-methods\"",
     "build": "npm run build:all-icons && npm run build:build",
-    "types:check": "tsc"
+    "types:check": "tsc",
+    "tooling": "concurrently \"npm:format:check\" \"npm:lint:check\" \"npm:build\" && npm run types:check",
+    "release": "npm run tooling && changeset publish"
   },
   "keywords": [
     "icons",
@@ -31,6 +41,7 @@
   "author": "Dheeraj Singh Nagdali <dheerajsinghnagdali@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@changesets/cli": "^2.26.2",
     "@commitlint/cli": "^18.2.0",
     "@commitlint/config-conventional": "^18.1.0",
     "@svgr/cli": "^8.1.0",
