@@ -9,6 +9,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
+    "plugin:storybook/recommended",
     "plugin:prettier/recommended",
   ],
   overrides: [
@@ -32,5 +33,5 @@ module.exports = {
       version: "detect",
     },
   },
-  plugins: ["@typescript-eslint", "react", "react-hooks"],
+  plugins: ["@typescript-eslint", "react", "react-hooks", "storybook"],
 };
