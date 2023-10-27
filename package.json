@@ -6,47 +6,46 @@
     "access": "public"
   },
   "files": [
-    "icons/**/*",
-    "brands/**/*",
-    "social-solid/**/*",
-    "social/**/*",
-    "payment-methods/**/*",
-    "flags/**/*",
-    "README.md"
+    "dist/**/*"
   ],
-  "main": "./icons/index.js",
-  "module": "./icons/index.mjs",
-  "types": "./icons/index.d.ts",
+  "main": "./dist/icons.js",
+  "module": "./dist/icons.mjs",
+  "types": "./dist/icons.d.ts",
   "exports": {
     ".": {
-      "types": "./icons/index.d.ts",
-      "import": "./icons/index.mjs",
-      "default": "./icons/index.js"
+      "types": "./dist/icons.d.ts",
+      "import": "./dist/icons.mjs",
+      "require": "./dist/icons.js"
     },
     "./brands": {
-      "types": "./brands/index.d.ts",
-      "import": "./brands/index.mjs",
-      "default": "./brands/index.js"
+      "types": "./dist/brands.d.ts",
+      "import": "./dist/brands.mjs",
+      "require": "./dist/brands.js"
     },
     "./social": {
-      "types": "./social/index.d.ts",
-      "import": "./social/index.mjs",
-      "default": "./social/index.js"
+      "types": "./dist/social.d.ts",
+      "import": "./dist/social.mjs",
+      "require": "./dist/social.js"
     },
     "./social-solid": {
-      "types": "./social-solid/index.d.ts",
-      "import": "./social-solid/index.mjs",
-      "default": "./social-solid/index.js"
+      "types": "./dist/social-solid.d.ts",
+      "import": "./dist/social-solid.mjs",
+      "require": "./dist/social-solid.js"
     },
     "./flags": {
-      "types": "./flags/index.d.ts",
-      "import": "./flags/index.mjs",
-      "default": "./flags/index.js"
+      "types": "./dist/flags.d.ts",
+      "import": "./dist/flags.mjs",
+      "require": "./dist/flags.js"
     },
     "./payment-methods": {
-      "types": "./payment-methods/index.d.ts",
-      "import": "./payment-methods/index.mjs",
-      "default": "./payment-methods/index.js"
+      "types": "./dist/payment-methods.d.ts",
+      "import": "./dist/payment-methods.mjs",
+      "require": "./dist/payment-methods.js"
+    },
+    "./special": {
+      "types": "./dist/special.d.ts",
+      "import": "./dist/special.mjs",
+      "require": "./dist/special.js"
     }
   },
   "scripts": {
@@ -55,14 +54,15 @@
     "format:check": "prettier --check .",
     "format:fix": "prettier --write .",
     "prepare": "husky install",
-    "build:icons": "svgr --config-file ./configs/icons.config.js assets/icons",
-    "build:social": "svgr --config-file ./configs/social.config.js assets/social",
-    "build:social-solid": "svgr --config-file ./configs/social-solid.config.js assets/social-solid",
-    "build:payment-methods": "svgr --config-file ./configs/payment-methods.config.js assets/payment-methods",
-    "build:flags": "svgr --config-file ./configs/flags.config.js assets/flags",
-    "build:brands": "svgr --config-file ./configs/brands.config.js assets/brands",
-    "build:all-icons": "rimraf ./build && concurrently \"npm:build:icons\" \"npm:build:social\" \"npm:build:social-solid\" \"npm:build:payment-methods\" \"npm:build:flags\" \"npm:build:brands\"",
-    "build:build": "rimraf ./icons ./brands ./social-solid ./social ./payment-methods ./flags && concurrently \"tsup build/icons/index.ts --format cjs,esm --dts --out-dir icons\" \"tsup build/brands/index.ts --format cjs,esm --dts --out-dir brands\" \"tsup build/social-solid/index.ts --format cjs,esm --dts --out-dir social-solid\" \"tsup build/social/index.ts --format cjs,esm --dts --out-dir social \" \"tsup build/flags/index.ts --format cjs,esm --dts --out-dir flags\"  \"tsup build/payment-methods/index.ts --format cjs,esm --dts --out-dir payment-methods\"",
+    "build:icons": "svgr --config-file ./configs/svgr.icons.config.js assets/icons",
+    "build:social": "svgr --config-file ./configs/svgr.social.config.js assets/social",
+    "build:social-solid": "svgr --config-file ./configs/svgr.social-solid.config.js assets/social-solid",
+    "build:payment-methods": "svgr --config-file ./configs/svgr.payment-methods.config.js assets/payment-methods",
+    "build:flags": "svgr --config-file ./configs/svgr.flags.config.js assets/flags",
+    "build:brands": "svgr --config-file ./configs/svgr.brands.config.js assets/brands",
+    "build:special": "svgr --config-file ./configs/svgr.special.config.js assets/special",
+    "build:all-icons": "rimraf ./build && concurrently \"npm:build:icons\" \"npm:build:social\" \"npm:build:social-solid\" \"npm:build:payment-methods\" \"npm:build:flags\" \"npm:build:brands\" \"npm:build:special\"",
+    "build:build": "rimraf dist && tsup",
     "build": "npm run build:all-icons && npm run build:build",
     "types:check": "tsc",
     "tooling": "concurrently \"npm:format:check\" \"npm:lint:check\" \"npm:build\" && npm run types:check",

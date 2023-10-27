@@ -45,3 +45,5 @@ Similarly, you can import the payment method icons from `@blend-metrics/icons/pa
 We've also got integration icons which can be imported from `@blend-metrics/icons/brands`
 
 Design system of Blend Metrics also got a whole variety of icons which you can import from `@blend-metrics/icons`
+
+The special icons can be imported from `@blend-metrics/icons/special`

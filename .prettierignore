@@ -21,9 +21,4 @@ next-env.d.ts
 
 # build
 build/
-icons/
-social-solid/
-social/
-brands/
-flags/
-payment-methods/
+dist/
