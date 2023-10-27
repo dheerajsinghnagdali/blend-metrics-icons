@@ -1,5 +1,11 @@
 # @blend-metrics/icons
 
+## 0.2.0
+
+### Minor Changes
+
+- The icons other than integration, payment method, social, country ones can be imported from `@blend-metrics/icons`
+
 ## 0.1.0
 
 ### Minor Changes

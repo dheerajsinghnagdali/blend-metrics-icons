@@ -1,6 +1,6 @@
 {
   "name": "@blend-metrics/icons",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Icons for React",
   "publishConfig": {
     "access": "public"
@@ -14,6 +14,41 @@
     "flags/**/*",
     "README.md"
   ],
+  "main": "./icons/index.js",
+  "module": "./icons/index.mjs",
+  "types": "./icons/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./icons/index.d.ts",
+      "import": "./icons/index.mjs",
+      "default": "./icons/index.js"
+    },
+    "./brands": {
+      "types": "./brands/index.d.ts",
+      "import": "./brands/index.mjs",
+      "default": "./brands/index.js"
+    },
+    "./social": {
+      "types": "./social/index.d.ts",
+      "import": "./social/index.mjs",
+      "default": "./social/index.js"
+    },
+    "./social-solid": {
+      "types": "./social-solid/index.d.ts",
+      "import": "./social-solid/index.mjs",
+      "default": "./social-solid/index.js"
+    },
+    "./flags": {
+      "types": "./flags/index.d.ts",
+      "import": "./flags/index.mjs",
+      "default": "./flags/index.js"
+    },
+    "./payment-methods": {
+      "types": "./payment-methods/index.d.ts",
+      "import": "./payment-methods/index.mjs",
+      "default": "./payment-methods/index.js"
+    }
+  },
   "scripts": {
     "lint:check": "eslint .",
     "lint:fix": "eslint --fix .",
