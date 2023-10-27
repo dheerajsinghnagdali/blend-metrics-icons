@@ -1,6 +1,6 @@
 {
   "name": "@blend-metrics/icons",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Icons for React",
   "publishConfig": {
     "access": "public"
@@ -31,7 +31,8 @@
     "build": "npm run build:all-icons && npm run build:build",
     "types:check": "tsc",
     "tooling": "concurrently \"npm:format:check\" \"npm:lint:check\" \"npm:build\" && npm run types:check",
-    "release": "npm run tooling && changeset publish"
+    "release": "npm run tooling && changeset publish",
+    "version": "changeset version"
   },
   "keywords": [
     "icons",
