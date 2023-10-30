@@ -10,8 +10,8 @@ const config = defineConfig({
     social: "build/social/index.ts",
     "social-solid": "build/social-solid/index.ts",
     brands: "build/brands/index.ts",
-    special: "build/special/index.ts",
-  },
+    special: "build/special/index.ts"
+  }
 });
 
 export default config;

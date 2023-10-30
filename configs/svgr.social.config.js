@@ -1,6 +1,8 @@
+const common = require("./svgr.common.config");
+
 module.exports = {
+  ...common,
   icon: "1.5rem",
-  typescript: true,
   outDir: "build/social",
-  filenameCase: "kebab",
+  template: require("./template")
 };

@@ -65,7 +65,7 @@
     "build:build": "rimraf dist && tsup",
     "build": "npm run build:all-icons && npm run build:build",
     "types:check": "tsc",
-    "tooling": "concurrently \"npm:format:check\" \"npm:lint:check\" \"npm:build\" && npm run types:check",
+    "tooling": "concurrently \"npm:build\" \"npm:format:check\" \"npm:lint:check\" && npm run types:check",
     "release": "npm run tooling && changeset publish",
     "version": "changeset version",
     "storybook": "storybook dev -p 6006",

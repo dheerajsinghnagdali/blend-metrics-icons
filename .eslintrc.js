@@ -2,7 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true,
+    node: true
   },
   extends: [
     "eslint:recommended",
@@ -10,28 +10,31 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:storybook/recommended",
-    "plugin:prettier/recommended",
+    "plugin:prettier/recommended"
   ],
   overrides: [
     {
       env: {
-        node: true,
+        node: true
       },
       files: [".eslintrc.{js,cjs}"],
       parserOptions: {
-        sourceType: "script",
-      },
-    },
+        sourceType: "script"
+      }
+    }
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",
-    sourceType: "module",
+    sourceType: "module"
   },
   settings: {
     react: {
-      version: "detect",
-    },
+      version: "detect"
+    }
   },
   plugins: ["@typescript-eslint", "react", "react-hooks", "storybook"],
+  rules: {
+    "@typescript-eslint/no-var-requires": "off"
+  }
 };
