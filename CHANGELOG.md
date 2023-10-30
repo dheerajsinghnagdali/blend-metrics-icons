@@ -1,5 +1,11 @@
 # @blend-metrics/icons
 
+## 0.4.5
+
+### Patch Changes
+
+- Use the right radio-button-checked-outline
+
 ## 0.4.4
 
 ### Patch Changes
