@@ -1,5 +1,11 @@
 # @blend-metrics/icons
 
+## 0.4.0
+
+### Minor Changes
+
+- Remove the redundant "Svg" prefix from all the icons and re-configure Prettier. Moreover, enable tooling for the build folder
+
 ## 0.3.0
 
 ### Minor Changes
