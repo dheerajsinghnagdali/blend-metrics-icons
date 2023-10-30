@@ -1,5 +1,11 @@
 # @blend-metrics/icons
 
+## 0.4.1
+
+### Patch Changes
+
+- Add new arrow-right, dot, plus, x, and arrow-up icons to the library.
+
 ## 0.4.0
 
 ### Minor Changes
