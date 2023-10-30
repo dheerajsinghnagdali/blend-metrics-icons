@@ -1,5 +1,11 @@
 # @blend-metrics/icons
 
+## 0.4.2
+
+### Patch Changes
+
+- Remove a dubplicate dot icon
+
 ## 0.4.1
 
 ### Patch Changes
