@@ -1,5 +1,11 @@
 # @blend-metrics/icons
 
+## 0.4.6
+
+### Patch Changes
+
+- Use the right copyright
+
 ## 0.4.5
 
 ### Patch Changes
