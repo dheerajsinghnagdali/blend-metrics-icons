@@ -1,5 +1,11 @@
 # @blend-metrics/icons
 
+## 0.5.0
+
+### Minor Changes
+
+- Add new Google icons
+
 ## 0.4.6
 
 ### Patch Changes
