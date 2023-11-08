@@ -1,5 +1,11 @@
 # @blend-metrics/icons
 
+## 0.6.0
+
+### Minor Changes
+
+- Blend Metrics' logo
+
 ## 0.5.0
 
 ### Minor Changes
