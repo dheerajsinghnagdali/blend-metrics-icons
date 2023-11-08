@@ -1,5 +1,11 @@
 # @blend-metrics/icons
 
+## 0.6.1
+
+### Patch Changes
+
+- Blend Metrics' SVG icon
+
 ## 0.6.0
 
 ### Minor Changes
