@@ -1,5 +1,11 @@
 # @blend-metrics/icons
 
+## 0.6.2
+
+### Patch Changes
+
+- Fix viewbox issue in special and payment method icons
+
 ## 0.6.1
 
 ### Patch Changes
