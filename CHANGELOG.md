@@ -1,5 +1,11 @@
 # @blend-metrics/icons
 
+## 0.6.3
+
+### Patch Changes
+
+- Add grid vertical and minimize icons
+
 ## 0.6.2
 
 ### Patch Changes
