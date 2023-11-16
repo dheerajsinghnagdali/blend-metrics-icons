@@ -1,6 +1,6 @@
 {
   "name": "@blend-metrics/icons",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Icons for React",
   "publishConfig": {
     "access": "public"
@@ -46,6 +46,11 @@
       "types": "./dist/special.d.ts",
       "import": "./dist/special.mjs",
       "require": "./dist/special.js"
+    },
+    "./marketeq": {
+      "types": "./dist/marketeq.d.ts",
+      "import": "./dist/marketeq.mjs",
+      "require": "./dist/marketeq.js"
     }
   },
   "scripts": {
@@ -61,11 +66,12 @@
     "build:flags": "svgr --config-file ./configs/svgr.flags.config.js assets/flags",
     "build:brands": "svgr --config-file ./configs/svgr.brands.config.js assets/brands",
     "build:special": "svgr --config-file ./configs/svgr.special.config.js assets/special",
-    "build:all-icons": "rimraf ./build && concurrently \"npm:build:icons\" \"npm:build:social\" \"npm:build:social-solid\" \"npm:build:payment-methods\" \"npm:build:flags\" \"npm:build:brands\" \"npm:build:special\"",
+    "build:marketeq": "svgr --config-file ./configs/svgr.marketeq.config.js assets/marketeq",
+    "build:all-icons": "rimraf ./build && concurrently npm:build:icons npm:build:social npm:build:social-solid npm:build:payment-methods npm:build:flags npm:build:brands npm:build:special npm:build:marketeq",
     "build:build": "rimraf dist && tsup",
     "build": "npm run build:all-icons && npm run build:build",
     "types:check": "tsc",
-    "tooling": "concurrently \"npm:build\" \"npm:format:check\" \"npm:lint:check\" && npm run types:check",
+    "tooling": "concurrently npm:build npm:format:check npm:lint:check && npm run types:check",
     "release": "npm run tooling && changeset publish",
     "version": "changeset version",
     "storybook": "storybook dev -p 6006",
