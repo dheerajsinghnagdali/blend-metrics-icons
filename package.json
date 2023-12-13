@@ -1,12 +1,12 @@
 {
   "name": "@blend-metrics/icons",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Icons for React",
   "publishConfig": {
     "access": "public"
   },
   "files": [
-    "dist/**/*"
+    "dist"
   ],
   "main": "./dist/icons.js",
   "module": "./dist/icons.mjs",

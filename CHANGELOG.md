@@ -1,5 +1,11 @@
 # @blend-metrics/icons
 
+## 0.7.1
+
+### Patch Changes
+
+- Add dist to the production build
+
 ## 0.7.0
 
 ### Minor Changes
