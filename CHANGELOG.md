@@ -1,5 +1,11 @@
 # @blend-metrics/icons
 
+## 0.7.0
+
+### Minor Changes
+
+- Marketeq icons
+
 ## 0.6.3
 
 ### Patch Changes
