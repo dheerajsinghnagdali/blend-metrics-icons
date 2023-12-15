@@ -1,5 +1,11 @@
 # @blend-metrics/icons
 
+## 0.8.0
+
+### Minor Changes
+
+- Google Sheets icon
+
 ## 0.7.1
 
 ### Patch Changes
